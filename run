@@ -1,0 +1,7 @@
+cpupower frequency-set --governor performance
+cpupower idle-set -d 3
+cpupower idle-set -d 2
+cpupower idle-set -d 1
+
+cd /root/sandstone-150-linux/bin/
+taskset -c 6 ./sandstone --test-list-file sse_wl.txt -vv -T 20m 
